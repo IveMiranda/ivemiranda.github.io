@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon_preto.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Arquitetura</title>
+    
+    <script>
+
+        $(function () {
+            $(window).scroll(() => pegarAltura()); 
+            $("#botao-topo").toggle();
+            pegarAltura();
+        });
+        // UTILIZAÇÃO SCROLL() - Voltar ao topo
+
+        function pegarAltura() {
+            if ($(window).scrollTop() > 400) {
+                $("#botao-topo").fadeIn(500);
+            } else{
+                $("#botao-topo").fadeOut(500)
+            }   
+        }
+    </script>
+
+</head>
+<body>
+    <div id="cont" class="container mt-5 mb-5">
+        <header id="cabecalho" class="row marcador align-items-center">
+            <img class="img-responsive mx-auto text-center" width="250" height="250" src="imagens/logo.png" alt="logo">
+        </header>
+        <nav class="navbar fixed navbar-expand-md col-md-12 mt-5 mb-5 navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img class="img-responsive" width="50" src="imagens/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" 
+            aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="index.html">Home <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a class="nav-link " href="quem_somos.html">Quem Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="fale_conosco.html">Fale conosco</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-uppercase dropdown-toggle active" href="projetos.html" id="navbarDropdown" role="button" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projetos</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-uppercase" href="projetos.html">Residenciais</a>
+                        <a class="dropdown-item text-uppercase" href="projetos.html">Comerciais</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-uppercase" href="projetos.html">Institucionais</a>
+                        </div>
+                    </li>    
+                </ul>
+            </div>
+        </nav>    
+        
+        <aside class="mt-5 col-md-12">
+            
+            <a id="botao-topo" href="#cabecalho">        
+                <img src="imagens/arrow-up-circle.svg" alt="seta"> 
+            </a>
+            <h3 class="text-center">SERVIÇOS</h3>
+            <div class="card mt-5 mb-5 offset-md-1" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase text-center"> acessibilidade</h5>
+                  <p class="card-text text-justify">Elaboramos projetos residenciais exclusivos para a idosos, cadeirantes e pessoas com
+                  mobilidade reduzida que precisam de um olhar especial nos espaços e mobiliário.</p>
+                </div>
+            </div>
+            <div class="card mt-5 mb-5 offset-md-6" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase text-center">consultoria</h5>
+                  <p class="card-text text-justify">Prestamos consultoria em     soluções construtivas e projetuais, ambientação,
+                  definição de materiais, cores e revestimentos, cronograma e orçamento de obra.</p>
+                </div>
+            </div>
+            <div class="card mt-5 mb-5 offset-md-1" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase text-center">estudo de fachada</h5>
+                  <p class="card-text text-justify">Estudamos possibilidades para fachadas de muros, casas, prédios e comércios utilizando
+                  conceitos de conforto térmico e visual, e
+                  sobretudo conceitos estéticos.</p>
+                </div>
+            </div>
+            <div class="card mt-5 mb-5 offset-md-6" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase text-center">interiores</h5>
+                  <p class="card-text text-justify">Otimizamos os espaços com criatividade para dar maior funcionalidade e conforto.
+                  Definimos acabamentos, revestimentos,
+                  cores, móveis e objetos de decoração de acordo com as necessidades e possibilidades do cliente.</p>
+                </div>
+            </div>
+            <div class="card mt-5 mb-5 offset-md-1" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase text-center">arquitetura</h5>
+                  <p class="card-text text-justify">Elaboramos os projetos a partir do levantamento, com fotografias e medidas
+                  do local e apresentamos a concepção das primeiras ideias com desenhos à mão livre ou imagens e diagramas, desenvolvendo e
+                  especificando até a completa execução da obra com os projetos complementares compatibilizados.</p>
+                </div>
+            </div>
+            <div class="card mt-5 mb-5 offset-md-6" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase text-center">paisagismo</h5>
+                  <p class="card-text text-justify">Fazemos indicações e         especificações de vegetações para ambientes internos e jardins, levando em consideração o entorno e a manutenção periódica.</p>
+                </div>
+            </div>
+            <div class="card mt-5 mb-5 offset-md-1" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase text-center">restauro</h5>
+                  <p class="card-text text-justify">Indicamos serviços e     intervenções para restaurar elementos de antigas casas,sobrados e demais edificações de interesse histórico cuja memória deve ser preservada.</p>
+                </div>
+            </div>             
+        </aside>
+        <footer id="rodape">
+            <div>
+                <img src="imagens/logo.png" alt="">
+            </div>
+            <div >
+                <p style="text-align: center;">Copyrigt &copy; 2021</br>
+                     <a href="http://facebook.com/ivemiranda" target="_blanck">Facebook</a>
+                    <a href="http://linkedin.com/ivemiranda" target="_blanck">linkedin</a> 
+                </p>
+            </div>
+        
+        </footer>
+    </div>    
+</body>
+</html> 
+
+                
+    
+
+
+
+
+
+      
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+        
