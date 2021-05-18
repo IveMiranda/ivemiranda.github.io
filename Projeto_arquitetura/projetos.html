@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon_preto.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Arquitetura</title>
+    <style>
+      body{
+        height: 1300px;
+        background-image: linear-gradient(#34346E,#54546E );
+        z-index: -1;
+      }
+      #cont{
+        height: 1243px;
+        background-color: rgba(255, 255, 255, 0.692);
+        box-shadow: white 0px 0px 5px 5px;
+        z-index: 0;
+        font-family: Arial;
+      }
+      #cabecalho{
+        height: 300px;
+        background-color: white;
+        border: 1px solid #54546E;
+        box-shadow: #54546E 0px 0px 5px 5px;
+      }
+      nav{
+        box-shadow: white 0px 0px 5px 5px;
+      }
+      #carouselExampleIndicators img{
+        width: 100%;
+        height: 600px;
+        box-shadow: white 0px 0px 10px 10px;
+      }
+      #rodape{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        background-color: white;
+          
+        box-shadow: white 0px 0px 5px 20px;
+        margin-top: 50px;
+      }
+      #rodape img{
+        width: 100px;
+        margin-left: 100px;
+      }
+      #rodape p{ 
+        margin-left: 600px;
+        margin-top: 45px;
+      }
+      #botao-topo{
+        position: fixed;
+        right: 80px;
+        bottom: 300px;
+      }
+    </style>
+    <script> 
+      $(function () {
+        $(window).scroll(() => pegarAltura()); 
+        $("#botao-topo").toggle();
+        pegarAltura();
+      });
+      // UTILIZAÇÃO SCROLL() - Voltar ao topo
+
+      function pegarAltura() {
+        if ($(window).scrollTop() > 200) {
+            $("#botao-topo").fadeIn(500);
+        } else{
+            $("#botao-topo").fadeOut(500)
+        }   
+      }
+    </script>  
+  </head>
+  <body >
+    <div id="cont" class="container mt-5 mb-5">
+      <header id="cabecalho" class="row marcador align-items-center">
+        <img class="img-responsive mx-auto text-center" width="250" height="250" src="imagens/logo.png" alt="logo">
+      </header>
+      <nav class="navbar fixed navbar-expand-md col-md-12 mt-5 mb-5 navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img class="img-responsive" width="50" src="imagens/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" 
+        aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase" href="index.html">Home <span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item text-uppercase">
+                  <a class="nav-link " href="quem_somos.html">Quem Somos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase" href="fale_conosco.html">Fale conosco</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-uppercase dropdown-toggle active" href="projetos.html" id="navbarDropdown" role="button" 
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projetos</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item text-uppercase" href="projetos.html">Residenciais</a>
+                      <a class="dropdown-item text-uppercase" href="projetos.html">Comerciais</a>
+                    <div class="dropdown-divider"></div>
+                      <a class="dropdown-item text-uppercase" href="projetos.html">Institucionais</a>
+                    </div>
+                </li>    
+            </ul>
+        </div>
+    </nav>
+    <aside>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block " src="imagens/Estar e Jantar III topaz.png" alt="Slide 1">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/A ZEKE cut.png" alt="Slide 2">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/ABC ZEKE.png" alt="Slide 3">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/PRAT - INÁ.png" alt="Slide 4">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/mood d e m.PNG" alt="Slide 5">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/Vista C1_.png" alt="Slide 6">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/Cozinha Vista Lateral.png" alt="Slide 7">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/2. Cama .jpg" alt="Slide 8">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/3.Painel.jpg" alt="Slide 9">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/5.bancada e Nichos.jpg" alt="Slide 10">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-80 h-80" src="imagens/JARDIM V - PINTEREST_.png" alt="Slide 11">
+              </div>
+              
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div>
+      </aside>
+      <footer id="rodape">
+        <div>
+            <img src="imagens/logo.png" alt="">
+        </div>
+        <div >
+          <p style="text-align: center;">Copyrigt &copy; 2021</br>
+            <a href="http://facebook.com/ivemiranda" target="_blanck">Facebook</a>
+            <a href="http://linkedin.com/ivemiranda" target="_blanck">linkedin</a>
+          </p>
+        </div>   
+      </footer>
+    </div>    
+  </body>
+</html> 
